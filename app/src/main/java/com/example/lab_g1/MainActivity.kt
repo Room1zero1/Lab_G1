@@ -30,18 +30,21 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun checkCharacter(character: Char): String { // Возвращает строку с результатом
+    fun checkCharacter(character: Char): String {
+        var result: String
         when (character) {
             in 'a'..'z' -> {
                 if (character in "aeiouAEIOU") {
-                    return "Это гласная буква"
+                    result = "Это гласная буква"
                 } else {
-                    return "Возможно, это согласная буква"
+                    result = "Возможно, это согласная буква"
                 }
             }
             else -> {
-                return "Введенный символ не является латинской строчной буквой"
+                result = "Введенный символ не является латинской строчной буквой"
             }
         }
+        return result
     }
+
 }
