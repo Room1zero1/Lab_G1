@@ -36,8 +36,10 @@ class MainActivity : AppCompatActivity() {
     fun onClickCheckButton(view: android.view.View) {
         val inputText = inputEditText.text.toString()
         if (inputText.isNotEmpty()) {
-            val character = inputText[0] // Берем первый символ
-            checkCharacter(character)
+            val character = inputText[0]
+            val checkResult = checkCharacter(character) // Храним результат проверки
+            outputTextView.text = checkResult.toString() // Отображаем результат
         }
     }
+
 }
